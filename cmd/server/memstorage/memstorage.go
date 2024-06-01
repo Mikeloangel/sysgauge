@@ -49,7 +49,7 @@ func updateGauge(key string, value float64) {
 func GetCounter(key string) (int64, error) {
 	value, ok := mem.counter[key]
 	if !ok {
-		return 0, errors.New("Key is not set")
+		return 0, errors.New("key is not set")
 	}
 
 	return value, nil
@@ -58,7 +58,7 @@ func GetCounter(key string) (int64, error) {
 func GetGauge(key string) (float64, error) {
 	value, ok := mem.gauge[key]
 	if !ok {
-		return 0, errors.New("Key is not set")
+		return 0, errors.New("key is not set")
 	}
 
 	return value, nil
